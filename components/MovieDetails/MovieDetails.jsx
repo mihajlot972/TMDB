@@ -1,7 +1,6 @@
 import styles from './MovieDetails.module.scss'
 import { ArrowLeftOutlined, StarOutlined } from '@ant-design/icons';
 import Link from 'next/link';
-import ReactTooltip from "react-tooltip";
 
 function MovieDetails(props) {
 

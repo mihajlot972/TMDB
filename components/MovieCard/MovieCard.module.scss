@@ -98,27 +98,5 @@
     }
 
     .movieDetails {
-        // margin-top: 5px;
-
-        button {
-            padding: 15px;
-            // background: #24141C;
-            background: transparent;
-            width: 100%;
-            border: 2px solid #AA2B33;
-            cursor: pointer;
-            color: white;
-            transition: 0.5s;
-            font-family: 'Montserrat', sans-serif;
-
-            &:focus {
-                outline: none;
-            }
-
-            &:hover {
-                border: 2px solid #AA2B33;
-                background: #AA2B33;
-            }
-        }
     }
 }

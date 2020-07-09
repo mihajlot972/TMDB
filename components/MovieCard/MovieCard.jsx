@@ -1,7 +1,8 @@
 import styles from './MovieCard.module.scss'
 import AddToFavorites from '../AddToFavorites/AddToFavorites';
 import { StarOutlined } from '@ant-design/icons';
-import Link from 'next/link'
+import Link from 'next/link';
+import Button from '../Shared/Button/Button';
 
 function MovieCard({ title, id, release_date, overview, vote_average }) {
     return (
@@ -33,9 +34,9 @@ function MovieCard({ title, id, release_date, overview, vote_average }) {
             </div>
             <div className={styles.movieDetails}>
                 <Link href='/movies/[movie_id]' as={`/movies/${id}`}>
-                    <button>
-                        See Movie Details
-                </button>
+                    <div>
+                        <Button>See Movie Details</Button>
+                    </div>
                 </Link>
             </div>
         </div>

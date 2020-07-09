@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
-import { createRequestToken, createAccessToken } from '../../services/auth-service';
+import { createRequestToken } from '../../services/auth-service';
 import { markFavoriteMovie } from '../../services/movie-service';
 import styles from './AddToFavorites.module.scss';
 import { HeartOutlined } from '@ant-design/icons';
 import ReactTooltip from "react-tooltip";
 import Modal from '../Modal/Modal';
 import Button from '../Shared/Button/Button';
-import { stubFalse, remove } from 'lodash';
 
 function AddToFavorites({ movieId }) {
     const [isModal, setModal] = useState(false);
@@ -39,7 +38,7 @@ function AddToFavorites({ movieId }) {
         let account_id = localStorage.getItem("account_id");
         let session_id = localStorage.getItem("session_id");
         let markFavorite = await markFavoriteMovie(movieId, account_id, session_id, false);
-        if(markFavorite.status_message === "The item/record was deleted successfully.") {
+        if (markFavorite.status_message === "The item/record was deleted successfully.") {
             setSuccess("Movie removed from favorites")
             setDeleteSuccess(true)
         }
@@ -54,13 +53,22 @@ function AddToFavorites({ movieId }) {
                 footer={<Button onClick={() => setModal(stubFalse)}>Not now</Button>}
                 onClose={() => setModal(false)}
             />
-            <ReactTooltip />
+
             <div className={styles.addToFavorites}>
-                {success.length > 0 ? <div className={styles.heartPressed}>
-                    {success}
-                    {!deleteSuccess ? <p className={styles.removeFavorite} onClick={removeFavorite}>Remove it?</p> : null}
-                </div> : <HeartOutlined onClick={addFavorite} data-tip="Love this movie? Add it to favorites!" />
+
+                {success.length > 0 ?
+                    <div className={styles.heartPressed}>
+                        <p>{success}</p>
+                        {
+                            !deleteSuccess ?
+                                <p className={styles.removeFavorite} onClick={removeFavorite}>Remove it?</p>
+                                : null
+                        }
+                    </div>
+                    :
+                    <HeartOutlined onClick={addFavorite} data-tip="Love this movie? Add it to favorites!" />
                 }
+                <ReactTooltip effect="solid" uuid="mytt" />
             </div>
         </div>
     )

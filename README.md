@@ -17,3 +17,4 @@ You can start editing the page by modifying `pages/index.js`. The page auto-upda
 - [lodash](https://lodash.com/) - for defaults in options parameter
 - [Ant Design Icons](https://ant.design/components/icon/) - for icons inside app
 - [axios](https://github.com/axios/axios) - for requests towards API
+- [sass](https://sass-lang.com/) - preprocessor for CSS

@@ -44,6 +44,7 @@ function FavoriteMovies() {
                     loading ? <EmptyItem>Loading movies from the API...</EmptyItem> :
                         currentMovies.length === 0 ? <EmptyItem>{favoriteMoviesStatus}</EmptyItem> : currentMovies.map(movie => {
                             return <MovieCard
+                                key={movie.id}
                                 id={movie.id}
                                 poster_path={movie.poster_path}
                                 title={movie.title}

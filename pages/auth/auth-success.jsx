@@ -29,7 +29,7 @@ function AuthSuccess() {
     return (
         <Layout>
             <Head>
-                <title>List of Favorite Movies</title>
+                <title>Authorization</title>
             </Head>
             <div style={{ color: 'white' }}>
                 {authStatus.length > 0 ?
@@ -38,7 +38,9 @@ function AuthSuccess() {
                     <EmptyItem>You are successfully authorized.<br />
                 You can add movies to favorites now.
                 <Link href="/">
-                            <Button>Browse movies</Button>
+                            <div>
+                                <Button>Browse movies</Button>
+                            </div>
                         </Link>
                     </EmptyItem>
                 }

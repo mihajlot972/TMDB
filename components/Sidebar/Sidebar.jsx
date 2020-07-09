@@ -2,6 +2,7 @@ import styles from './Sidebar.module.scss'
 import Link from 'next/link'
 import { useRouter } from "next/router"
 import { RightOutlined, FireOutlined, StarOutlined, RiseOutlined, CalendarOutlined, BarChartOutlined, LogoutOutlined } from '@ant-design/icons';
+import ReactTooltip from "react-tooltip";
 import React, { useState, useEffect } from 'react'
 
 
@@ -32,7 +33,6 @@ function Sidebar({ }) {
                         </div>
                         <h2>Movie App</h2>
                     </div>
-                    {/* <hr /> */}
                     <div className={styles.sidebarItems}>
                         <Link href="/">
                             <div className={router.pathname == "/" ? styles.sidebarItemActive : styles.sidebarItem}>
@@ -70,8 +70,9 @@ function Sidebar({ }) {
                             <LogoutOutlined />
                             <p onClick={logout}>Logout</p>
                         </div>
-                        : <p>You are not authenticated</p>
+                        : <p data-tip="Start adding movies to favorites to authenticate" className={styles.notAuthenticated}>You are not authenticated</p>
                     }
+                    <ReactTooltip place='top'  effect="solid" uuid="mytt"/>
                 </div>
             </div>
         </div>

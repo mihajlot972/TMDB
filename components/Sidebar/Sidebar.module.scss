@@ -1,0 +1,121 @@
+@import '../../styles/variables';
+
+.sidebarWrapper {
+    position: fixed;
+    width: 220px;
+    height: 100%;
+    top: 0;
+    transition: 0.3s;
+    box-shadow: rgba(0, 0, 0, 0.3) 6px 0px 10px 0px;
+
+    .sidebar {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        color: white;
+        border-right: 1px solid lightgray;
+        height: 100%;
+        font-family: 'Montserrat', sans-serif;
+
+
+        .sidebarTop {
+            .header {
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                transition: 0.5s;
+                padding: 15px;
+                cursor: default;
+
+                h2 {
+                    margin-left: 10px;
+                }
+
+
+                &:hover {
+                    background: $brand-red;
+                }
+            }
+        }
+
+        hr {
+            margin: 0;
+        }
+
+        .sidebarBottom {
+            transition: 0.5s;
+            text-align: left;
+            padding: 25px;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &:hover {
+                color: $brand-red;
+            }
+
+            p {
+                margin-left: 5px;
+            }
+            .logout {
+                display: flex;
+                align-items: center;
+            }
+        }
+
+
+        .sidebarItems {
+            .sidebarItem {
+                transition: 0.3s;
+                padding: 15px 25px 15px 25px;
+                display: flex;
+                align-items: center;
+
+                p {
+                    color: white;
+                    margin-left: 15px;
+                }
+
+                &:hover {
+                    cursor: pointer;
+                    background: $brand-red;
+                }
+            }
+
+            .sidebarItemActive {
+                transition: 0.3s;
+                padding: 15px 25px 15px 25px;
+                display: flex;
+                align-items: center;
+                padding: 25px 25px 25px 25px;
+                background: $brand-red;
+
+                p {
+                    margin-left: 15px;
+                }
+            }
+        }
+    }
+
+}
+
+@media (max-width: 768px) {
+    .sidebarWrapper {
+        width: 70px;
+
+        p {
+            display: none;
+        }
+        .header {
+            .menuIcon {
+                text-align: center;
+                width: 100%;
+            }
+            h2 {
+                display: none;
+            }
+        }
+    }
+
+}

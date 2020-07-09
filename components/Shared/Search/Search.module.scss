@@ -1,0 +1,25 @@
+.searchWrapper {
+    width: 100%;
+
+    .search {
+        padding: 15px;
+
+        input {
+            transition: 0.3s;
+            font-family: 'Montserrat', sans-serif;
+            width: 100%;
+            padding: 15px;
+            border: 1px solid lightgray;
+            border-radius: 2px;
+
+            &:focus {
+                outline: none;
+                font-size: 20px;
+                padding: 15px;
+            }
+            &::placeholder {
+                font-style: italic;
+            }
+        }
+    }
+}

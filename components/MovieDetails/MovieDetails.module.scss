@@ -1,0 +1,122 @@
+@import '../../styles/variables';
+
+.movieDetailsWrapper {
+    font-family: "Montserrat", sans-serif;
+    color: white;
+    height: 100vh;
+    display: table;
+    width: 100%;
+    max-width: 1080px;
+    margin: auto auto;
+
+    h2 {
+        margin-bottom: 0px;
+    }
+
+    .movieDetail {
+        display: table-cell;
+        vertical-align: middle;
+        padding-left: 245px;
+        padding-right: 20px;
+        max-width: 1080px;
+        width: 100%;
+        margin: 0px auto;
+
+        .microInfo {
+            color: $brand-red;
+        }
+
+        .overview {
+            .description {
+                p {
+                    margin-bottom: 10px;
+                }
+            }
+
+            .genres {
+                display: flex;
+
+                p {
+                    font-size: 14px;
+                    font-style: italic;
+                    margin-top: 0px;
+                    margin-right: 5px;
+                }
+            }
+        }
+
+        .movieDetailName {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+
+
+            .rating {
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+
+                p {
+                    margin-right: 15px;
+                }
+            }
+        }
+
+        h1 {
+            margin-bottom: 0px;
+            color: $brand-red;
+        }
+
+        .tagline {
+            font-size: 14px;
+            font-style: italic;
+
+            p {
+                margin-top: 0px;
+            }
+        }
+    }
+
+    .goBack {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        transition: 0.5s;
+        margin-top: 30px;
+
+        p {
+            margin-left: 15px;
+        }
+
+        &:hover {
+            color: $brand-red;
+        }
+    }
+
+    .movieData {
+        display: flex;
+        width: 100%;
+        font-size: 14px;
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 768px) {
+    .movieDetailsWrapper {
+        .movieDetail {
+            padding-left: 85px;
+        }
+
+        .movieData {
+            flex-direction: column;
+        }
+
+        .goBack {
+            width: 100%;
+            justify-content: center;
+        }
+    }
+
+}

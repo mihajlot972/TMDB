@@ -1,0 +1,15 @@
+@import '../../styles/variables';
+
+.addToFavoritesWrapper {
+    padding: 5px;
+    .addToFavorites {
+        color: $brand-grey;
+        width: 100%;
+        text-align: left;
+
+        .removeFavorite {
+            cursor: pointer;
+            color: $brand-red;
+        }
+    }
+}

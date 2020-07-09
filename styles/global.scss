@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+* {
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #222831;
+}
+
+.movie-col {
+    width: 33.333333333%;
+    padding: 20px;
+}
+
+@media (max-width: 1120px) {
+    .movie-col {
+        width: 50%;
+    }
+}
+
+@media (max-width: 900px) {
+    .movie-col {
+        width: 100%;
+    }
+}

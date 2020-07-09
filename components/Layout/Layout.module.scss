@@ -1,0 +1,12 @@
+.container {
+    margin: 0px auto;
+    padding-left: 245px;
+    padding-right: 15px;
+    transition: 0.5s;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding-left: 70px;
+    }
+}

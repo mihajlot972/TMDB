@@ -1,0 +1,17 @@
+{
+    "popular_movies": "https://api.themoviedb.org/3/movie/popular?",
+    "top_rated_movies": "https://api.themoviedb.org/3/movie/top_rated",
+    "movie_details": "https://api.themoviedb.org/3/movie/",
+    "upcoming_movies": "https://api.themoviedb.org/3/movie/upcoming",
+    "search_movies": "https://api.themoviedb.org/3/search/movie",
+    "mark_favorite": "https://api.themoviedb.org/3/account/",
+    "favorite_movies": "https://api.themoviedb.org/3/account/",
+    "generate_guest_session": "https://api.themoviedb.org/3/authentication/guest_session/new",
+    "generate_auth_token": "https://api.themoviedb.org/3/authentication/token/new",
+    "auth_user": "https://www.themoviedb.org/authenticate",
+    "api_key": "cbdc69d1fd1a96c48e45fa67e4180d07",
+    "api_bearer": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJjYmRjNjlkMWZkMWE5NmM0OGU0NWZhNjdlNDE4MGQwNyIsInN1YiI6IjVmMDQ3ZWE1MWY5OGQxMDAzNjE0NGIxMyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.nNhUx4Z91RQM5uzSriTwZNPkOvooDTNmGLOK3loXPsY",
+    "access_token": "https://api.themoviedb.org/4/auth/access_token",
+    "session_id": "https://api.themoviedb.org/3/authentication/session/convert/4",
+    "request_token": "https://api.themoviedb.org/4/auth/request_token"
+}

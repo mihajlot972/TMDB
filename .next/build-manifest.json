@@ -24,19 +24,7 @@
     "/_polyfills": [
       "static/runtime/polyfills.js"
     ],
-    "/auth/auth-success": [
-      "static/runtime/webpack.js",
-      "static/runtime/main.js"
-    ],
     "/index": [
-      "static/runtime/webpack.js",
-      "static/runtime/main.js"
-    ],
-    "/movies/favorite-movies": [
-      "static/runtime/webpack.js",
-      "static/runtime/main.js"
-    ],
-    "/movies/top-rated-movies": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],

@@ -5,7 +5,7 @@ import MovieCard from '../components/MovieCard/MovieCard';
 import Layout from '../components/Layout/Layout';
 import LoadMore from '../components/Shared/LoadMore/LoadMore';
 import Search from '../components/Shared/Search/Search';
-import EmptyItem from '../components/EmptyItem/EmptyItem';
+import StatusMessage from '../components/StatusMessage/StatusMessage';
 
 
 export async function getStaticProps() {
@@ -79,7 +79,7 @@ export default function Home({ popularMovies }) {
                 </div>
               )
             })}
-          </div> : <EmptyItem>Sorry, couldn't find any movie regarding this keyword :/</EmptyItem>}
+          </div> : <StatusMessage>Sorry, couldn't find any movie regarding this keyword :/</StatusMessage>}
           {search.length === 0 ? <LoadMore paginate={paginate} /> : null}
         </main>
       </Layout>

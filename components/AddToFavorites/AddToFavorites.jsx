@@ -48,9 +48,9 @@ function AddToFavorites({ movieId }) {
         <div className={styles.addToFavoritesWrapper}>
             <Modal
                 isVisible={isModal}
-                title="We need to authorize you first"
+                title="We need to authenticate you first"
                 content={<a href={requestURL} target='_blank'>Click here to approve account usage</a>}
-                footer={<Button onClick={() => setModal(stubFalse)}>Not now</Button>}
+                footer={<Button onClick={() => setModal(false)}>Not now</Button>}
                 onClose={() => setModal(false)}
             />
 

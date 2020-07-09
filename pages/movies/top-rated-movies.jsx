@@ -5,7 +5,7 @@ import Head from 'next/head';
 import LoadMore from '../../components/Shared/LoadMore/LoadMore';
 import { getTopRatedMovies, searchMovie } from '../../services/movie-service';
 import Search from '../../components/Shared/Search/Search';
-import EmptyItem from '../../components/EmptyItem/EmptyItem';
+import StatusMessage from '../../components/StatusMessage/StatusMessage';
 
 export async function getStaticProps() {
     const topRatedMovies = await getTopRatedMovies();
@@ -50,7 +50,6 @@ export default function TopRated({ topRatedMovies }) {
         }, 500);
     }
 
-
     return (
         <div>
             <Layout>
@@ -74,7 +73,7 @@ export default function TopRated({ topRatedMovies }) {
                             </div>
                         )
                     })}
-                </div> : <EmptyItem>Sorry, couldn't find any movie regarding this keyword :/</EmptyItem>}
+                </div> : <StatusMessage>Sorry, couldn't find any movie regarding this keyword :/</StatusMessage>}
                 <LoadMore paginate={paginate} />
             </Layout>
         </div>

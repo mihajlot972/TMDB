@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import Layout from '../../components/Layout/Layout';
-import EmptyItem from '../../components/EmptyItem/EmptyItem'
+import StatusMessage from '../../components/StatusMessage/StatusMessage'
 import MovieCard from '../../components/MovieCard/MovieCard'
 import { getFavoriteMovies } from '../../services/movie-service';
 
@@ -41,8 +41,8 @@ function FavoriteMovies() {
             </Head>
             <div style={{ color: 'white' }}>
                 {
-                    loading ? <EmptyItem>Loading movies from the API...</EmptyItem> :
-                        currentMovies.length === 0 ? <EmptyItem>{favoriteMoviesStatus}</EmptyItem> : currentMovies.map(movie => {
+                    loading ? <StatusMessage>Loading movies from the API...</StatusMessage> :
+                        currentMovies.length === 0 ? <StatusMessage>{favoriteMoviesStatus}</StatusMessage> : currentMovies.map(movie => {
                             return <MovieCard
                                 key={movie.id}
                                 id={movie.id}
@@ -52,9 +52,7 @@ function FavoriteMovies() {
                                 release_date={movie.release_date}
                                 vote_average={movie.vote_average} />
                         })
-
                 }
-
             </div>
         </Layout>
     )

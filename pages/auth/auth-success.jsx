@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import Layout from '../../components/Layout/Layout';
-import EmptyItem from '../../components/EmptyItem/EmptyItem'
+import StatusMessage from '../../components/StatusMessage/StatusMessage'
 import Button from '../../components/Shared/Button/Button'
 import { createAccessToken, createSessionId } from '../../services/auth-service';
 
@@ -33,16 +33,16 @@ function AuthSuccess() {
             </Head>
             <div style={{ color: 'white' }}>
                 {authStatus.length > 0 ?
-                    <EmptyItem>{authStatus}</EmptyItem>
+                    <StatusMessage>{authStatus}</StatusMessage>
                     :
-                    <EmptyItem>You are successfully authorized.<br />
+                    <StatusMessage>You are successfully authorized.<br />
                 You can add movies to favorites now.
                 <Link href="/">
                             <div>
                                 <Button>Browse movies</Button>
                             </div>
                         </Link>
-                    </EmptyItem>
+                    </StatusMessage>
                 }
 
             </div>

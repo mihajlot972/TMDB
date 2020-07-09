@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import MovieCard from '../../components/MovieCard/MovieCard';
-import EmptyItem from '../../components/EmptyItem/EmptyItem';
+import StatusMessage from '../../components/StatusMessage/StatusMessage';
 import Layout from '../../components/Layout/Layout';
 import Head from 'next/head';
 import LoadMore from '../../components/Shared/LoadMore/LoadMore';
@@ -50,7 +50,6 @@ export default function UpcomingMovies({ upcomingMovies }) {
         }, 500);
     }
 
-
     return (
         <div>
             <Layout>
@@ -74,7 +73,7 @@ export default function UpcomingMovies({ upcomingMovies }) {
                             </div>
                         )
                     })}
-                </div> : <EmptyItem>Sorry, couldn't find any movie regarding this keyword :/</EmptyItem>}
+                </div> : <StatusMessage>Sorry, couldn't find any movie regarding this keyword :/</StatusMessage>}
                 <LoadMore paginate={paginate} />
             </Layout>
         </div>

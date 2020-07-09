@@ -28,15 +28,7 @@
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
-    "/movies/favorite-movies": [
-      "static/runtime/webpack.js",
-      "static/runtime/main.js"
-    ],
     "/movies/upcoming-movies": [
-      "static/runtime/webpack.js",
-      "static/runtime/main.js"
-    ],
-    "/next/dist/pages/_error": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ]
